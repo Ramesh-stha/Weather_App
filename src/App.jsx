@@ -44,7 +44,7 @@ const App = () => {
       {error && <p className="text-red-600 font-semibold">{error}</p>}
 
       {/* Weather Card */}
-      {weather && (
+      {!error && weather && (
         <div className="bg-white bg-opacity-80 backdrop-blur-md rounded-xl p-6 shadow-xl w-full max-w-md text-center mt-4 transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-2">{weather.name}</h2>
           <p className="text-xl mb-1">🌡 Temp: {weather.main.temp} °C</p>
